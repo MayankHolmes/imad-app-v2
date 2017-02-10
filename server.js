@@ -12,10 +12,10 @@ app.get('/', function (req, res) {
 app.get('/Day2', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Day2.html'));
 });
-app.get('/', function (req, res) {
+app.get('/Day1', function (req, res) {
   res.send('activities of day 1');
 });
-app.get('/', function (req, res) {
+app.get('/Day3', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Day3.html'));
 });
 app.get('/ui/style.css', function (req, res) {
