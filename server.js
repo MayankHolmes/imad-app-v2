@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var may={
-     'may1':{
+     'may-1':{
    title:'Mayank Holmes',
    content:`<p>
          Welcome to NPTEL.
@@ -53,12 +53,7 @@ app.get('/:mayNumber', function (req, res) {
     var mayNumber=req.params.mayNumber;
   res.send(createtemp(may[mayNumber]));
 });
-app.get('/Day1', function (req, res) {
-  res.send('activities of day 1');
-});
-app.get('/Day3', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Day3.html'));
-});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
