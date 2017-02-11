@@ -49,9 +49,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:Day9', function (req, res) {
-    var day9=req.params.Day9;
-  res.send(createtemp(days[Day9]));
+app.get('/:DayDigit', function (req, res) {
+    var dayDigit=req.params.DayDigit;
+  res.send(createtemp(days[DayDigit]));
 });
 
 app.get('/ui/style.css', function (req, res) {
