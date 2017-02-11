@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var may={
-     may1:{
+     'may1':{
    title:'Mayank Holmes',
    content:`<p>
          Welcome to NPTEL.
