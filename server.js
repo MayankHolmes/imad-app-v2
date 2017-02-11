@@ -6,10 +6,13 @@ var app = express();
 app.use(morgan('combined'));
 
 var may={
+     may1:{
    title:'Mayank Holmes',
    content:`<p>
          Welcome to NPTEL.
      </p>`
+        
+    }
    
 };
 
@@ -46,8 +49,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/Day2', function (req, res) {
-  res.send(createtemp(may));
+app.get('/:article-name', function (req, res) {
+    var articlename=req.params.articlename;
+  res.send(createtemp(may[article-name]));
 });
 app.get('/Day1', function (req, res) {
   res.send('activities of day 1');
