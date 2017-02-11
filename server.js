@@ -47,7 +47,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/Day2', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Day2.html'));
+  res.send(createtemp(may));
 });
 app.get('/Day1', function (req, res) {
   res.send('activities of day 1');
