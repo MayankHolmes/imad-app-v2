@@ -50,7 +50,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:DayDigit', function (req, res) {
-    var dayDigit=req.params.DayDigit;
+    var DayDigit=req.params.DayDigit;
   res.send(createtemp(days[DayDigit]));
 });
 
