@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var Days={
-     'Day2':{
+var days={
+     'dayTwo':{
    title:'Mayank Holmes',
    content:`<p>
          Welcome to NPTEL.
@@ -51,7 +51,7 @@ app.get('/', function (req, res) {
 
 app.get('/:dayNumber', function (req, res) {
     var dayNumber=req.params.dayNumber;
-  res.send(createtemp(day[dayNumber]));
+  res.send(createtemp(days[dayNumber]));
 });
 
 app.get('/ui/style.css', function (req, res) {
