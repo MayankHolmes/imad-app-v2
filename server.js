@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var days={
-     'Day2':{
+     Day2:{
    title:'Mayank Holmes',
    content:`<p>
          Welcome to NPTEL.
@@ -51,7 +51,7 @@ app.get('/', function (req, res) {
 
 app.get('/:DayDigit', function (req, res) {
     var dayDigit=req.params.DayDigit;
-  res.send(createtemp(days[DayDigit]));
+  res.send(createtemp(Day2));
 });
 
 app.get('/ui/style.css', function (req, res) {
