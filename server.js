@@ -49,9 +49,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:article-name', function (req, res) {
-    var articlename=req.params.articlename;
-  res.send(createtemp(may[article-name]));
+app.get('/:mayNumber', function (req, res) {
+    var mayNumber=req.params.mayNumber;
+  res.send(createtemp(may[mayNumber]));
 });
 app.get('/Day1', function (req, res) {
   res.send('activities of day 1');
