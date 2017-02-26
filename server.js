@@ -66,8 +66,8 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+app.get('/ui/12196277_1651812745097614_3209256683447267969_n.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', '12196277_1651812745097614_3209256683447267969_n.png'));
 });
 
 
