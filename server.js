@@ -57,13 +57,14 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
-app.get('/:DayDigit', function (req, res) {
-    var DayDigit=req.params.DayDigit;
-  res.send(createtemp(days[DayDigit]));
-});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+app.get('/:DayDigit', function (req, res) {
+    var DayDigit=req.params.DayDigit;
+  res.send(createtemp(days[DayDigit]));
 });
 
 app.get('/ui/12196277_1651812745097614_3209256683447267969_n.png', function (req, res) {
