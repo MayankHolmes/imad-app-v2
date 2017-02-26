@@ -48,7 +48,7 @@ return htmltemp;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('ui/12196277_1651812745097614_3209256683447267969_n.png', function (req, res) {
+app.get('ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'ui/madi.png'));
 });
 
