@@ -17,6 +17,6 @@ submit.onclick=function(){
          list <- '<li>' +comments[i]+ '</li>';
      }
      
-     var ul=document.getElementById('submit_btn');
+     var ul=document.getElementById('comment_box');
      ul.innerHTML=list;
 };
