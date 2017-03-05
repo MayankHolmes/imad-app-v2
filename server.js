@@ -74,8 +74,8 @@ app.get('/ui/12196277_1651812745097614_3209256683447267969_n.png', function (req
   res.sendFile(path.join(__dirname, 'ui', '12196277_1651812745097614_3209256683447267969_n.png'));
 });
 var comments=[];
-app.get('/cbox/:comment', function (req, res) {
-  var comment=req.params.comment;
+app.get('/cbox', function (req, res) {
+  var comment=req.query.comment;
   comments.push(comment);
   res.send(JSON.stringify(comments));
 });
