@@ -10,13 +10,28 @@ var comment1 =commentinput.value;
 var submit=document.getElementById('submit_btn');
 
 submit.onclick=function(){
-    var comments=['n1','n2','n3'];
-     var list='';
-     for(var i=0;i<comments.length;i++)
+    
+    
+    var request=new XMLHttpRequest();
+    request.onreadystatechange=function()
+    {
+    if(request.readystate===XMLHttpRequest.DONE)
+    {
+        if(request.status==200)
+        {
+            var comments=request.responseText;
+            comments=JSON.parse(comments);
+            var list='';
+        for(var i=0;i<comments.length;i++)
      {
-         list += '<li>' +comments[i]+ '</li>';
+           list += '<li>' +comments[i]+ '</li>';
      }
-     
-     var ul=document.getElementById('comment_box');
-     ul.innerHTML=list;
+        
+           var ul=document.getElementById('comment_box');
+           ul.innerHTML=list;
+        }}
+    };
 };
+
+request.open('http://mayankholmes.imad.hasura-app.io/cbox?comment='+comment1,true);
+request.send(null);
