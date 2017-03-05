@@ -12,7 +12,7 @@ var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
     var comments=['1','2','3'];
      var list='';
-     for(var i=0;i<comments.length();i++)
+     for(var i=0;i<comments.length;i++)
      {
          list <- '<li>'+comments[i]+'</li>';
      }
