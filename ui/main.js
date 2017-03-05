@@ -10,8 +10,7 @@ button.onclick= function(){
 var submit=document.getElementById('submit_btn');
 
 submit.onclick=function(){
-   request.open('GET','http://mayankholmes.imad.hasura-app.io/cbox?comments='+comment1,true);
-request.send(null);
+  
     var request=new XMLHttpRequest();
     
     request.onreadystatechange=function()
@@ -33,7 +32,8 @@ request.send(null);
         }}
     };
 
-var commentinput=document.getElementById('comment');
-var comment1 =commentinput.value;
-
+ var commentinput=document.getElementById('comment');
+ var comment1 =commentinput.value;
+ request.open('GET','http://mayankholmes.imad.hasura-app.io/cbox?comments='+comment1,true);
+ request.send(null);
 };
