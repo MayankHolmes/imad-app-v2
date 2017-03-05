@@ -32,7 +32,7 @@ submit.onclick=function(){
         }}
     };
 
- var comment1=document.getElementById('comment').value;
+ var comment1=document.getElementById('commentx').value;
  
  request.open('GET','http://mayankholmes.imad.hasura-app.io/cbox?comments='+comment1,true);
  request.send(null);
