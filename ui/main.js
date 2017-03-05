@@ -34,6 +34,6 @@ submit.onclick=function(){
 
  var comment1=document.getElementById('commentx').value;
  
- request.open('GET','http://mayankholmes.imad.hasura-app.io/cbox?comments='+comment1,true);
+ request.open('GET','http://http://mayankholmes.imad.hasura-app.io/cbox?comment='+comment1,true);
  request.send(null);
 };
