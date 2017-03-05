@@ -6,11 +6,11 @@ button.onclick= function(){
   span.innerHTML=counter.toString();
 };
 
- var commentinput=document.getElementById('comment');
+ 
 var submit=document.getElementById('submit_btn');
 
 submit.onclick=function(){
-   
+   var commentinput=document.getElementById('comment');
     var comment1 =commentinput.value;
     var request=new XMLHttpRequest();
     request.onreadystatechange=function()
