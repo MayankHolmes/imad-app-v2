@@ -6,7 +6,7 @@ button.onclick= function(){
   span.innerHTML=counter.toString();
 };
 var input=document.getElementById('comment');
-var comment =input.value;
+var comment1 =input.value;
 var submit=document.getElementById('submit_btn');
 
 submit.onclick=function(){
