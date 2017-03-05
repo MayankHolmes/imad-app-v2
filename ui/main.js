@@ -31,7 +31,8 @@ submit.onclick=function(){
            ul.innerHTML=list;
         }}
     };
-};
+
 
 request.open('http://mayankholmes.imad.hasura-app.io/cbox?comment='+comment1,true);
 request.send(null);
+};
