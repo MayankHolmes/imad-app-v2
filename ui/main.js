@@ -16,7 +16,7 @@ submit.onclick=function(){
     {
     if(request.readystate===XMLHttpRequest.DONE)
     {
-        if(request.status==200)
+        if(request.status===200)
         {
             var comments=request.responseText;
             comments=JSON.parse(comments);
