@@ -1,9 +1,9 @@
 var button=document.getElementById('counter');
 var counter=0;
 button.onclick= function(){
-  counter=counter+1;
-  var span=document.getElementById('count');
-  span.innerHTML=counter.toString();
+counter=counter+1;
+var span=document.getElementById('count');
+span.innerHTML=counter.toString();
 };
 
  
@@ -20,15 +20,15 @@ submit.onclick=function(){
         if(request.status===200)
         {
              comments=request.responseText;
-            comments=JSON.parse(comments);
-            var list='';
+             comments=JSON.parse(comments);
+             var list='';
         for(var i=0;i<comments.length;i++)
      {
-           list += '<li>' +comments[i]+ '</li>';
+             list += '<li>' +comments[i]+ '</li>';
      }
         
-           var ul=document.getElementById('comment_box');
-           ul.innerHTML=list;
+             var ul=document.getElementById('comment_box');
+             ul.innerHTML=list;
         }}
     };
 
