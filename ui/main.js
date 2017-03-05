@@ -10,8 +10,7 @@ button.onclick= function(){
 var submit=document.getElementById('submit_btn');
 
 submit.onclick=function(){
-   var commentinput=document.getElementById('comment');
-    var comment1 =commentinput.value;
+   
     var request=new XMLHttpRequest();
     request.onreadystatechange=function()
     {
@@ -32,7 +31,8 @@ submit.onclick=function(){
         }}
     };
 
-
+var commentinput=document.getElementById('comment');
+var comment1 =commentinput.value;
 request.open('http://mayankholmes.imad.hasura-app.io/cbox?comment='+comment1,true);
 request.send(null);
 };
