@@ -33,6 +33,6 @@ submit.onclick=function(){
 
 var commentinput=document.getElementById('comment');
 var comment1 =commentinput.value;
-request.open('http://mayankholmes.imad.hasura-app.io/cbox?comments='+comment1,true);
+request.open('http://mayankholmes.imad.hasura-app.io/cbox?comment='+comment1,true);
 request.send(null);
 };
