@@ -73,7 +73,12 @@ app.get('/:DayDigit', function (req, res) {
 app.get('/ui/12196277_1651812745097614_3209256683447267969_n.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', '12196277_1651812745097614_3209256683447267969_n.png'));
 });
-
+var comments=[];
+app.get('/CBox/:comment', function (req, res) {
+  var comment=req.params.comment;
+  comments.push(comment);
+  res.send(JSON.stringify(comment));
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
