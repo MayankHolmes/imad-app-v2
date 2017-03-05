@@ -48,7 +48,12 @@ return htmltemp;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+var comments=[];
+app.get('/cbox', function (req, res) {
+  var comment=req.query.comment;
+  comments.push(comment);
+  res.send(JSON.stringify(comments));
+});
 
 app.get('/ui/main.js', function (req, res) {
     
@@ -64,12 +69,7 @@ app.get('/counter', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-var comments=[];
-app.get('/cbox', function (req, res) {
-  var comment=req.query.comment;
-  comments.push(comment);
-  res.send(JSON.stringify(comments));
-});
+
 
 app.get('/:DayDigit', function (req, res) {
     var DayDigit=req.params.DayDigit;
