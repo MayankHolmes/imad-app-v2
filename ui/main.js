@@ -5,12 +5,12 @@ button.onclick= function(){
   var span=document.getElementById('count');
   span.innerHTML=counter.toString();
 };
-var commentinput=document.getElementById('comment');
 
+ var commentinput=document.getElementById('comment');
 var submit=document.getElementById('submit_btn');
 
 submit.onclick=function(){
-    
+   
     var comment1 =commentinput.value;
     var request=new XMLHttpRequest();
     request.onreadystatechange=function()
