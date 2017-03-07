@@ -1,9 +1,23 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var pool = require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
+
+var pool = new pool(config);
+app.get('test-db',function(req,res){
+pool.query('SELECT * FROM sample',function(err,result)
+{
+    if (err){
+        res.status(500).send(err.toString());
+    }
+    else
+    {
+        res.send(JSON.stringify(result));
+    }
+   } );
+});
 
 var days={
      Day2:{
