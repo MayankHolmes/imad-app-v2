@@ -5,7 +5,7 @@ var pool = require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
 
-var pool = new pool(config);
+/*var pool = new pool(config);
 app.get('test-db',function(req,res){
 pool.query('SELECT * FROM sample',function(err,result)
 {
@@ -17,7 +17,7 @@ pool.query('SELECT * FROM sample',function(err,result)
         res.send(JSON.stringify(result));
     }
    } );
-});
+});*/
 
 var days={
      Day2:{
